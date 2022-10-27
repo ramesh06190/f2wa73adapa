@@ -8,10 +8,8 @@ router.get('/', function(req, res, next) {
     x= req.query.x
   }
   var y=Math.abs(x);
-  var y1=Math.cbrt(x);
-  var y2=Math.atan2(x);
-  var y3=Math.atanh(x);
-  res.render('computation', { title: 'Computing cube root of a number',content:`Math.cbrt() applied to ${x} is ${Math.cbrt(x)}`});
+  res.render('computation', { title: 'Computing cube root of a number',content:`Math.cbrt() applied to ${y} is ${Math.cbrt(y)}`, content1:`\nMath.atan2() applied to ${y} is ${Math.atan2(y)}`,
+  content3:`\nMath.atanh() applied to ${y} is ${Math.atanh(y)}`});
 });
 
 module.exports = router;
